@@ -1,0 +1,38 @@
+name: Error en una lección
+description: Reporta un error en la teoría, un ejercicio o un ejemplo de AprendeGo.
+title: "Error en la lección: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por avisarnos. Si llegaste desde el enlace de una lección, la lección y la página ya vienen completas.
+  - type: input
+    id: leccion
+    attributes:
+      label: Lección
+      description: El título de la lección donde encontraste el error.
+      placeholder: "Variables y tipos"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Página
+      description: La dirección de la lección.
+      placeholder: "https://…"
+    validations:
+      required: false
+  - type: textarea
+    id: problema
+    attributes:
+      label: ¿Qué está mal?
+      description: Cuéntanos qué viste. Si es un ejercicio, indica cuál y pega tu código o el mensaje que apareció.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ¿Qué esperabas?
+      description: Opcional. Lo que creías que iba a pasar o cómo debería decirse.
+    validations:
+      required: false
